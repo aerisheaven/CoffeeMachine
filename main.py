@@ -68,6 +68,7 @@ def process_coins():
     total = (num_quarters * QUARTER) + (num_dimes * DIME) + (num_nickels * NICKEL) + (num_pennies * PENNY)
     if total < MENU[order]["cost"]:
         print("Sorry, that's not enough money. Money refunded.")
+        return 0
     else:
         money_var = calculate_change(total)
         print(f"Here is your {order}. Enjoy!")
